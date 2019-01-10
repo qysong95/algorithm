@@ -12,9 +12,11 @@ public int rotatedPosition(int[] array) {
     while (left < right - 1) {  // we want to terminate if left neighbors right
         int mid = left + (right - left) / 2;
         if (array[mid] > array[left]) {
-            left = mid; // left = mid + 1 (wrong!!! when input.length == 3, it would be left == right after first round
+            // left = mid + 1 (wrong!!! when input.length == 3, it would be left == right after first round
+            left = mid; 
         } else {
-            right = mid; // right = mid - 1 (wrong!!!)
+            // right = mid - 1 (wrong!!!)
+            right = mid;
         }
     }
     if (array[left] <= array[right]) {
