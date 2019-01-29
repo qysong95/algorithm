@@ -3,6 +3,8 @@ public String removeChar(String input, char ch) {
         return input;
     }
     char[] array = input.toCharArray();
+    int fast = 0;
+    int slow = 0;
     while (fast < array.length) {
         if (array[fast] == ch) {
             fast++;
